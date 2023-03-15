@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Service1" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:58192/Service1.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:58192/Service1.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:58192/Service1.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/WCFServiceApp" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IService1_GetItems_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetItems" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetItems_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetItemsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_InsertItem_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertItem" />
+  </wsdl:message>
+  <wsdl:message name="IService1_InsertItem_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertItemResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UpdateItem_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateItem" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UpdateItem_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateItemResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeleteItem_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteItem" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeleteItem_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteItemResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICashierService1_GetCashiers_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCashiers" />
+  </wsdl:message>
+  <wsdl:message name="ICashierService1_GetCashiers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCashiersResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICashierService1_InsertCashier_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertCashier" />
+  </wsdl:message>
+  <wsdl:message name="ICashierService1_InsertCashier_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertCashierResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICashierService1_UpdateCashier_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateCashier" />
+  </wsdl:message>
+  <wsdl:message name="ICashierService1_UpdateCashier_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateCashierResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICashierService1_DeleteCashier_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteCashier" />
+  </wsdl:message>
+  <wsdl:message name="ICashierService1_DeleteCashier_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteCashierResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IService1">
+    <wsdl:operation name="GetItems">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetItems" message="tns:IService1_GetItems_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetItemsResponse" message="tns:IService1_GetItems_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertItem">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/InsertItem" message="tns:IService1_InsertItem_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/InsertItemResponse" message="tns:IService1_InsertItem_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateItem">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/UpdateItem" message="tns:IService1_UpdateItem_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/UpdateItemResponse" message="tns:IService1_UpdateItem_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteItem">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/DeleteItem" message="tns:IService1_DeleteItem_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/DeleteItemResponse" message="tns:IService1_DeleteItem_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="ICashierService1">
+    <wsdl:operation name="GetCashiers">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICashierService1/GetCashiers" message="tns:ICashierService1_GetCashiers_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICashierService1/GetCashiersResponse" message="tns:ICashierService1_GetCashiers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertCashier">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICashierService1/InsertCashier" message="tns:ICashierService1_InsertCashier_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICashierService1/InsertCashierResponse" message="tns:ICashierService1_InsertCashier_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCashier">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICashierService1/UpdateCashier" message="tns:ICashierService1_UpdateCashier_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICashierService1/UpdateCashierResponse" message="tns:ICashierService1_UpdateCashier_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteCashier">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICashierService1/DeleteCashier" message="tns:ICashierService1_DeleteCashier_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICashierService1/DeleteCashierResponse" message="tns:ICashierService1_DeleteCashier_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetItems">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetItems" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertItem">
+      <soap:operation soapAction="http://tempuri.org/IService1/InsertItem" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateItem">
+      <soap:operation soapAction="http://tempuri.org/IService1/UpdateItem" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteItem">
+      <soap:operation soapAction="http://tempuri.org/IService1/DeleteItem" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="BasicHttpBinding_ICashierService1" type="tns:ICashierService1">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetCashiers">
+      <soap:operation soapAction="http://tempuri.org/ICashierService1/GetCashiers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertCashier">
+      <soap:operation soapAction="http://tempuri.org/ICashierService1/InsertCashier" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCashier">
+      <soap:operation soapAction="http://tempuri.org/ICashierService1/UpdateCashier" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteCashier">
+      <soap:operation soapAction="http://tempuri.org/ICashierService1/DeleteCashier" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service1">
+    <wsdl:port name="BasicHttpBinding_IService1" binding="tns:BasicHttpBinding_IService1">
+      <soap:address location="http://localhost:58192/Service1.svc" />
+    </wsdl:port>
+    <wsdl:port name="BasicHttpBinding_ICashierService1" binding="tns:BasicHttpBinding_ICashierService1">
+      <soap:address location="http://localhost:58192/Service1.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

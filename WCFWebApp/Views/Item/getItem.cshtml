@@ -1,0 +1,31 @@
+﻿
+@{
+    ViewBag.Title = "getItem";
+}
+
+<h2>getItem</h2>
+
+<table border="1">
+    <tr>
+        <th>I_Id</th>
+        <th>I_Name</th>
+        <th>I_Quantity</th>
+        <th>I_Description</th>
+    </tr>
+    @foreach(var item in ViewBag.List)
+            {
+<tr>
+    <th>@item.iid</th>
+    <th>@item.iName</th>
+    <th>@item.iQuantity</th>
+    <th>@item.iDesc</th>
+</tr>
+            }
+</table>
+
+<br/><br/>
+<form>
+    <input type="submit" value="Insert" formmethod="post" formaction="@Url.Action("insertItem")"/>
+    <input type="submit" value="Update" formmethod="post" formaction="@Url.Action("updateItem")"/>
+    <input type="submit" value="Delete" formmethod="post" formaction="@Url.Action("deleteItem")"/>
+</form>

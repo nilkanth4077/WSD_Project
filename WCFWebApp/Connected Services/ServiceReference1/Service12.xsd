@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/WCFServiceApp" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/WCFServiceApp" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Item" nillable="true" type="tns:Item" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfItem" nillable="true" type="tns:ArrayOfItem" />
+  <xs:complexType name="Item">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="iDesc" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="iName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="iQuantity" type="xs:int" />
+      <xs:element minOccurs="0" name="iid" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Item" nillable="true" type="tns:Item" />
+  <xs:complexType name="ArrayOfCashier">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Cashier" nillable="true" type="tns:Cashier" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCashier" nillable="true" type="tns:ArrayOfCashier" />
+  <xs:complexType name="Cashier">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="cName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="cRole" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="cid" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Cashier" nillable="true" type="tns:Cashier" />
+</xs:schema>

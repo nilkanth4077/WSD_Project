@@ -1,0 +1,14 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<form method="post">
+    Item: @Html.DropDownList("DropDownList", ViewBag.DropDownList as SelectList, "Select Item")<br /><br />
+    Quantity: <input type="number" name="quantity" /><br /><br />
+    Price: <input type="number" name="price" /><br /><br />
+    <input type="submit" value="Add In List" />
+</form>
+

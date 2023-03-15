@@ -1,0 +1,11 @@
+﻿
+@{
+    ViewBag.Title = "deleteItem";
+}
+
+<h2>deleteItem</h2>
+
+<form method="post" action="@Url.Action("deleteItem")">
+    Id:<input type="text" name="iid" />
+    <input type="submit" value="Delete" />
+</form>

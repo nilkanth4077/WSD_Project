@@ -1,0 +1,22 @@
+﻿
+@{
+    ViewBag.Title = "getCashier";
+}
+
+<h2>getCashier</h2>
+
+<table border="1">
+    <tr>
+        <th>C_Id</th>
+        <th>C_Name</th>
+        <th>C_Role</th>
+    </tr>
+    @foreach (var ca in ViewBag.List)
+    {
+        <tr>
+            <th>@ca.cid</th>
+            <th>@ca.cName</th>
+            <th>@ca.cRole</th>
+        </tr>
+    }
+</table>
